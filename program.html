@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@1,500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <title>Program</title>
+
+<style>
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0px;
+    background: rgb(201, 233, 222);
+    box-shadow: 0 5px 15px rgba(0, 0,0, 0.3);
+    z-index: 19999;
+    position: sticky;
+    top: 0%;
+    left: 0%;
+
+}
+#navbar:hover{
+    box-shadow: 0 5px 15px rgba(0, 0,0, 0.6);
+}
+
+#navbar ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#navbar ul li a{
+    align-items: center;
+    color: rgb(8, 133, 243);
+    display: block;
+    padding: 3px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+#navbar ul li{
+    position: relative;
+}
+#navbar ul li a:hover{
+    color: black;
+    /* background-color: rgb(247, 225, 225); */
+    box-shadow: 0 5px 15px rgba(0, 0,0, 0.6);
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.active1{
+    color: rgb(8, 133, 243);
+}
+#navbar ul li a.active1::after,
+#navbar ul li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(247, 225, 225);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+
+.logo img{
+    height: 10vh;
+    width: 20vh;
+}
+
+
+.home img{
+    height: 50vh;
+    width: 100%;
+    opacity: 75%;
+}
+
+.center{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(1, 18, 12);
+    font-size: 5rem;
+    font-weight: bolder;
+    border: 1px solid black;
+    background-color: white;
+    /* margin: 20px 20px; */
+    padding: 10px;
+}
+
+#prgram{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0% 10% 0% 10%;
+    font-weight:bold;
+    font-size: 1rem;
+    font-family: 'Finlandica', sans-serif;
+}
+
+
+.btnrgstr{
+    display: block;
+    border: 1px solid black;
+    padding: 25%;
+    
+}
+button{
+    margin: 0% 25% 0% 0%;
+    font-weight: 900;
+    background-color: rgb(255, 195, 20);
+    width: 290%;
+    box-sizing: border-box
+    
+}
+button:hover{
+    /* color: antiquewhite; */
+    cursor: pointer;
+    transition: 0.4s ease;
+    background-color: aquamarine;
+}
+.register {
+    margin: 0% 5% 0% 5%;
+    font-weight: 900;
+    /* cursor: pointer;
+    transition: 0.4s ease; */
+    
+}
+
+.line1{
+    padding: 5%
+    
+}
+
+.new1{
+    
+    border: 1px solid orangered;
+
+}
+.price{
+    line-height: 1.8;
+}
+
+
+.line{
+    margin: 30px;
+}
+
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 50px;
+    align-items: center;
+    font-weight: 700;
+    justify-content: space-between;
+    margin: 40px 90px 0px 90px;
+    background-color: antiquewhite;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .logoo{
+    margin-bottom: 30px;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+footer .follow{
+    margin-top: 20px;
+    
+}
+
+footer .follow i{
+    color: #465b42;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .install .row img{
+    height: 10vh;
+    width: 15vh;
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+
+footer .install img{
+    margin: 10px 0 15px 0;
+}
+
+footer .pay{
+    height: 10vh;
+    width: 15vh;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color: #088178;
+}
+
+
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+}
+
+</style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <img src="images/logo/fa6a529671837.560d81c9f418b.jpg" alt="">
+        </div>
+        <ul>
+            <li class="iteam"><a href="index.html">Home</li></a>
+            <li class="iteam"><a href="#">About</li></a>
+            <li class="iteam"><a href="index.html">Gallery</li></a>
+            <li class="iteam"><a href="#">Contact</li></a>
+            <li class="iteam"><a href="indoor.html">Indoor</li></a>
+            <li class="iteam"><a href="outdoor.html">Outdoor</li></a>
+            <li class="iteam"><a href="online.html">Online</li></a>
+            <li class="iteam"><a class="active1" href="program.html">Program</li></a>
+        </ul>
+            
+    </nav>
+
+    <section id="Home">
+        <div class="home">
+            <img src="images/home-image.jpg" alt="">
+            <div class="center">Program</div>
+        </div>
+    </section>
+
+
+
+    <h1 class="line1"><hr class="new1"></h1>
+
+
+    <section id="prgram" class="program">
+        <div class="program1">
+            <p>Trail.. Game (age 10 above)</p>
+            
+        </div>
+        <div class="price">
+            <p>2 hour <br>Free Price</p>
+            
+
+        </div>
+        <div class="register">
+            <button class="btnrgstr" onclick="myFunction()">Register</button>
+            
+        </div>
+    </section>
+
+    <h1 class="line1"><hr class="new1"></h1>
+    <section id="prgram" class="program">
+        <div class="program1">
+            
+            <p>Indoor Game (age 10 above)</p>
+            
+        </div>
+        <div class="price">
+            
+            <p>Daily<br>Rs 5000</p>
+            
+
+        </div>
+        <div class="register">
+            <button class="btnrgstr" onclick="myFunction()">Register</button>
+            
+        </div>
+    </section>
+
+    <h1 class="line1"><hr class="new1"></h1>
+    <section id="prgram" class="program">
+        <div class="program1">
+            
+            <p>Outdoor Game (age 10 above)</p>
+            
+        </div>
+        <div class="price">
+            
+            <p>Daily<br>Rs 5000</p>
+            
+
+        </div>
+        <div class="register">
+            <button class="btnrgstr" onclick="myFunction()">Register</button>
+        </div>
+    </section>
+
+    <h1 class="line1"><hr class="new1"></h1>
+    <section id="prgram" class="program">
+        <div class="program1">
+            
+            <p>Online Game (age 15 above)</p>
+        </div>
+        <div class="price">
+            <p>Daily<br>Rs 5000</p>
+
+        </div>
+        <div class="register">
+            <button class="btnrgstr" onclick="myFunction()">Register</button>
+        </div>
+    </section>
+
+    
+
+    <h1 class="line"><hr></h1>
+  <footer>
+
+
+    <div class="follow">
+        <h4>Follow us</h4>
+
+        <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </div>
+
+    <div class="col">
+        <h4>About us</h4>
+        <a href="#">Programs</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Tearms & conditions</a>
+        <a href="#">Contact us</a>
+    </div>
+
+    <div class="col">
+        <h4>My contact</h4>
+        <a href="signin">Sign In</a>
+        <a href="#">Program</a>
+        <!-- <a href="#">My Wishlist</a>
+        <a href="#"></a> -->
+        <a href="#">Help</a>
+    </div>
+    
+    
+
+    <div class="copyright">
+        Copyright &copy; www.gamingfunhub. All rights reserved!
+
+    </div>
+
+  </footer>
+
+
+
+    <script>
+        function myFunction() {
+      alert("Sorry, this service is not yet available for online booking. Please contact us for more information. 🤗");
+    }
+    </script>
+</body>
+</html>
